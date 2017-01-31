@@ -14,3 +14,16 @@ def stringy_times(size)
   end
   new_array.join("")
 end
+
+def stringy_range_each(size)
+  new_array = Array.new
+
+  (1..size).each do |num|
+    if num.odd?
+      new_array << '1'
+    else
+      new_array << '0'
+    end
+  end
+  new_array.join("")
+end
