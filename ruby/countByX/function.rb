@@ -23,3 +23,16 @@ def count_by_x_range(multiples, num_length)
 
   new_array
 end
+
+#while loop
+def count_by_x_while(multiples, num_length)
+  i = 1
+  new_array = []
+
+  while(i <= num_length)
+    new_array << (i * multiples)
+    i += 1
+  end
+
+  new_array
+end
