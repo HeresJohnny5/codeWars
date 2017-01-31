@@ -9,3 +9,7 @@ def greeting(name)
     "Hello, #{name}!"
   end
 end
+
+def refactored_greeting(name)
+  name == "Johnny" ? "Hello, my love!" : "Hello, #{name}!"
+end
