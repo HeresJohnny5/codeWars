@@ -13,3 +13,8 @@ def diagonalSum(exampleArray)
 
   total
 end
+
+def diagonalSumBonus(exampleArray)
+  new_array = exampleArray.map.with_index { |value, index| value[index] }
+  sum = new_array.inject(&:+)
+end
