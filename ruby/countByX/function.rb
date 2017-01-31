@@ -36,3 +36,15 @@ def count_by_x_while(multiples, num_length)
 
   new_array
 end
+
+#times iteration
+def count_by_x_times(multiples, num_length)
+  new_array = []
+
+  num_length.times do |num|
+    num += 1
+    new_array.push(num * multiples)
+  end
+
+  new_array
+end

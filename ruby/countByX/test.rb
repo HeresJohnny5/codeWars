@@ -40,4 +40,17 @@ class TestCountByX < Minitest::Test
     multiples = 10
     assert_equal([10, 20], count_by_x_while(multiples, num_length))
   end
+
+  #times tests
+  def test_returns_array_15_30_45_60
+    num_length = 4
+    multiples = 15
+    assert_equal([15, 30, 45, 60], count_by_x_times(multiples, num_length))
+  end
+
+  def test_returns_array_5_10_15_20_25
+    num_length = 5
+    multiples = 5
+    assert_equal([5, 10, 15, 20, 25], count_by_x_times(multiples, num_length))
+  end
 end
