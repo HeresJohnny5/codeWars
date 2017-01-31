@@ -23,4 +23,15 @@ class Stringy < Minitest::Test
     size = 5
     assert_equal('10101', stringy_range_each(size))
   end
+
+  #while tests
+  def test_while_returns_10101010
+    size = 8
+    assert_equal('10101010', stringy_while(size))
+  end
+
+  def test_while_returns_10101010101
+    size = 11
+    assert_equal('10101010101', stringy_while(size))
+  end
 end
