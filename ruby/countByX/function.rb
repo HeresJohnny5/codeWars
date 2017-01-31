@@ -48,3 +48,8 @@ def count_by_x_times(multiples, num_length)
 
   new_array
 end
+
+#map iteration
+def count_by_x_map(multiples, num_length)
+  (1..num_length).map{ |i| i * multiples }
+end

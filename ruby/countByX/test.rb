@@ -53,4 +53,17 @@ class TestCountByX < Minitest::Test
     multiples = 5
     assert_equal([5, 10, 15, 20, 25], count_by_x_times(multiples, num_length))
   end
+
+  #map tests
+  def test_returns_array_6_12_18_24
+    num_length = 4
+    multiples = 6
+    assert_equal([6, 12, 18, 24], count_by_x_map(multiples, num_length))
+  end
+
+  def test_returns_array_2_4_6_8_10_12
+    num_length = 6
+    multiples = 2
+    assert_equal([2, 4, 6, 8, 10, 12], count_by_x_map(multiples, num_length))
+  end
 end
