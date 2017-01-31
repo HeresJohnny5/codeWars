@@ -45,3 +45,14 @@ def stringy_while(size)
   end
   new_array.join("")
 end
+
+#times ternary method
+def stringy_ternary(size)
+  new_array = []
+
+  size.times do |num|
+    num.even? ? new_array << '1' : new_array << '0'
+  end
+
+  new_array.join("")
+end

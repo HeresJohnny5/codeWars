@@ -34,4 +34,15 @@ class Stringy < Minitest::Test
     size = 11
     assert_equal('10101010101', stringy_while(size))
   end
+
+  #ternary tests
+  def test_ternary_returns_10
+    size = 2
+    assert_equal('10', stringy_ternary(size))
+  end
+
+  def test_ternary_returns_10101010
+    size = 8
+    assert_equal('10101010', stringy_ternary(size))
+  end
 end
