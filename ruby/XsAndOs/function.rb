@@ -73,3 +73,9 @@ def xs_and_os_refactored?(string)
     false
   end
 end
+
+#code wars answer
+def xo?(str)
+  str.downcase!
+  str.count("o") == str.count("x")
+end

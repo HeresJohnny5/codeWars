@@ -35,7 +35,7 @@ class TestXsAndOs < Minitest::Test
 end
 
 class TestXsAndOsRefactored < Minitest::Test
-  def test_method_calling_methods
+  def test_refactored_code
     assert_equal(true, xs_and_os_refactored?("Xooxxo"))
     assert_equal(true, xs_and_os_refactored?("XXOOoxOx"))
     assert_equal(true, xs_and_os_refactored?("XpoSXOLJjlsxojdflox"))
@@ -44,5 +44,18 @@ class TestXsAndOsRefactored < Minitest::Test
     assert_equal(false, xs_and_os_refactored?("XXOOoxOxO"))
     assert_equal(false, xs_and_os_refactored?("XpoSXOLJjlsxojdflo"))
     assert_equal(false, xs_and_os_refactored?("oOxjdldfjl"))
+  end
+end
+
+class TestXsAndOsCodeWars < Minitest::Test
+  def test_code_wars
+    assert_equal(true, xo?("Xooxxo"))
+    assert_equal(true, xo?("XXOOoxOx"))
+    assert_equal(true, xo?("XpoSXOLJjlsxojdflox"))
+    assert_equal(true, xo?("jldjelJELJCL"))
+    assert_equal(false, xo?("Xoxxo"))
+    assert_equal(false, xo?("XXOOoxOxO"))
+    assert_equal(false, xo?("XpoSXOLJjlsxojdflo"))
+    assert_equal(false, xo?("oOxjdldfjl"))
   end
 end
