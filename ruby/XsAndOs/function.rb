@@ -14,3 +14,24 @@ def array_of_strings_includes_x_or_o?(array_of_strings)
     false
   end
 end
+
+def x_and_o_count?(array_of_characters)
+  x_size = 0
+  o_size = 0
+
+  array_of_characters.each do |character|
+    if character == "x" || character == "X"
+      x_size += 1
+    elsif character == "o" || character == "O"
+      o_size += 1
+    else
+      character
+    end
+  end
+
+  if x_size == o_size
+    true
+  else
+    false
+  end
+end

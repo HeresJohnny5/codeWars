@@ -8,10 +8,17 @@ class TestXsAndOs < Minitest::Test
     assert_equal(["o", "x", "o", "x", "o", "o", "s"], string_to_array("oXOxoos"))
   end
 
-  def test_array_of_strings_includes_x_or_o
+  def test_array_of_strings_includes_x_and_o
     assert_equal(true, array_of_strings_includes_x_or_o?(["s", "r", "l", "t"]))
     assert_equal(true, array_of_strings_includes_x_or_o?(["r", "i", "p", "t", "m"]))
     assert_equal(false, array_of_strings_includes_x_or_o?(["o", "r", "o", "t"]))
     assert_equal(false, array_of_strings_includes_x_or_o?(["r", "x", "x", "t", "o"]))
+  end
+
+  def test_x_and_o_count_are_the_same
+    assert_equal(true, x_and_o_count?(["o", "o", "x", "x"]))
+    assert_equal(false, x_and_o_count?(["o", "x", "x", "x"]))
+    assert_equal(true, x_and_o_count?(["x", "o", "x", "x", "o", "o"]))
+    assert_equal(false, x_and_o_count?(["x", "o", "x", "x", "o", "p"]))
   end
 end
