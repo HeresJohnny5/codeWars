@@ -35,3 +35,13 @@ def x_and_o_count?(array_of_characters)
     false
   end
 end
+
+def xs_and_os?(string)
+  array_of_strings = string_to_array(string)
+
+  if array_of_strings_includes_x_or_o?(array_of_strings) == false
+    x_and_o_count?(array_of_strings)
+  else
+    true
+  end
+end
