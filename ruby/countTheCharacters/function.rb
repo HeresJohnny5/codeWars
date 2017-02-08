@@ -9,4 +9,10 @@ class CodeWarsKata
   def count_char
     @string.downcase.count(@character.downcase)
   end
+
+  def count_char_regex
+    character_upcase = @character.upcase
+    character_downcase = @character.downcase
+    @string.scan(/[#{character_upcase} #{character_downcase}]/).count
+  end
 end
