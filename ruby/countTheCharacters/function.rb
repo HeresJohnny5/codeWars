@@ -7,6 +7,6 @@ class CodeWarsKata
   end
 
   def count_char
-    @string.count(@character)
+    @string.downcase.count(@character.downcase)
   end
 end
