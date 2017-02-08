@@ -15,4 +15,14 @@ class CodeWarsKata
     character_downcase = @character.downcase
     @string.scan(/[#{character_upcase} #{character_downcase}]/).count
   end
+
+  def reverse_engineer_count_char
+    total = 0
+
+    @string.each_char do |char_element|
+      total += 1 if char_element.downcase == @character || char_element.upcase == @character
+    end
+
+    total
+  end
 end
