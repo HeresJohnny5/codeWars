@@ -14,7 +14,6 @@
 =end
 
 class CodeWarsKata
-
   attr_accessor :distance, :bus_drive, :bus_walk
 
   def initialize(distance, bus_drive, bus_walk)
@@ -40,5 +39,20 @@ class CodeWarsKata
     else
       "Walk"
     end
+  end
+
+  def calculator_ternary
+    walk_speed = 5
+      #this variable was given
+    bus_driving_speed = 8
+      #this variable was given
+
+    walk = distance/walk_speed
+    bus = (bus_drive/bus_driving_speed) + (bus_walk/walk_speed)
+
+    return "Bus" if walk > 2
+    return "Walk" if walk <= 1.0/6.0
+
+    return [walk, bus].min == walk ? "Walk" : "Bus"
   end
 end
