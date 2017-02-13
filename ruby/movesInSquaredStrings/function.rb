@@ -43,3 +43,17 @@ class SequenceOfSquaredStrings
     end
   end
 end
+
+class SequenceRefactored
+  def vert_mirror_refactored(string)
+    string.split.map! { |group| group.reverse }.join("\n")
+  end
+
+  def hor_mirror_refactored(string)
+    string.split.reverse.join("\n")
+  end
+
+  def oper_refactored(fct, string)
+    fct == :vert_mirror ? vert_mirror_refactored(string) : hor_mirror_refactored(string)
+  end
+end
