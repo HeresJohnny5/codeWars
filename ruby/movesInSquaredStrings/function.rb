@@ -34,4 +34,12 @@ class SequenceOfSquaredStrings
 
     new_array.join("\n")
   end
+
+  def oper(fct, string)
+    if fct == :vert_mirror
+      vert_mirror(string)
+    else
+      hor_mirror(string)
+    end
+  end
 end
