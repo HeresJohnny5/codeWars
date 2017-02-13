@@ -21,7 +21,16 @@ class SequenceOfSquaredStrings
       new_array.push(group.reverse)
     end
 
-    new_array
+    new_array.join("\n")
+  end
+
+  def hor_mirror(string)
+    groups = string.split("\n")
+    new_array = []
+
+    groups.each do |group|
+      new_array.unshift(group)
+    end
 
     new_array.join("\n")
   end
