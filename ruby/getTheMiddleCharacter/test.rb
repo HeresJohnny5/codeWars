@@ -9,5 +9,7 @@ class TestMiddleCharacter < Minitest::Test
     assert_equal("A", get_middle("A"))
     assert_equal("hn", get_middle("Johnny"))
     assert_equal("tl", get_middle("Portland"))
+    assert_equal("o", get_middle("Johnsonburg"))
+    assert_equal("c", get_middle("Nacho"))
   end
 end
