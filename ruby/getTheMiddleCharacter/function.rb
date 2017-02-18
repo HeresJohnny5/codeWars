@@ -8,6 +8,9 @@
   "A" should return "A"
 =end
 
-def get_middle()
-  
+def get_middle(string)
+  if string.length.odd?
+    odd_middle = string.length/2
+    string[odd_middle]
+  end
 end
