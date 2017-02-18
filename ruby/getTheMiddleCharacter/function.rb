@@ -17,3 +17,7 @@ def get_middle(string)
     string.slice((even_middle - 1)..even_middle)
   end
 end
+
+def get_middle_refactored(string)
+  string.length.odd? ? string[string.length/2] : string.slice(((string.length/2) - 1)..(string.length/2))
+end
