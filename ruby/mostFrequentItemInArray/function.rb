@@ -9,6 +9,8 @@
 
 class CodeWarsKata
   def most_frequent_item_count(collection)
+    return 0 if collection.empty?
+
     count = Hash.new
 
     collection.uniq.each do |num|
