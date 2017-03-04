@@ -13,3 +13,9 @@ def shortest_word(statement)
 
   empty_array.min
 end
+
+def shortest_word_refactored(statement)
+  empty_array = []
+  statement.split(" ").map! { |word| empty_array.push(word.length) }
+  empty_array.min
+end
