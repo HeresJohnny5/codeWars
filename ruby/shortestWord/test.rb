@@ -6,4 +6,9 @@ class TestShortestWord < Minitest::Test
     statement = "bitcoin take over the world maybe who knows perhaps"
     assert_equal(3, shortest_word(statement))
   end
+
+  def test_statement_short_word_returns_count_of_1
+    statement = "i want to travel the world writing code one day"
+    assert_equal(1, shortest_word(statement))
+  end
 end
