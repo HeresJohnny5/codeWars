@@ -19,3 +19,8 @@ def shortest_word_refactored(statement)
   statement.split(" ").map! { |word| empty_array.push(word.length) }
   empty_array.min
 end
+
+
+# def find_short(s)
+#   s.split.map(&:size).min
+# end
