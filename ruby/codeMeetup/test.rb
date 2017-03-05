@@ -10,9 +10,9 @@ class TestCodeMeetup < Minitest::Test
       { first_name: 'Ryan', last_name: 'S', country: 'Canada', age: 30, language: 'C#' },
       { first_name: 'Edward', last_name: 'L', country: 'India', age: 25, language: 'Python' }
      ]
-     assert_equal("Ryan", sort_by_language(group)[0][:first_name])
-     assert_equal("C#", sort_by_language(group)[0][:language])
-     assert_equal("Lena", sort_by_language(group)[1][:first_name])
-     assert_equal("JavaScript", sort_by_language(group)[1][:language])
+     assert_equal("Ryan", sorted_group(group)[0][:first_name])
+     assert_equal("C#", sorted_group(group)[0][:language])
+     assert_equal("Lena", sorted_group(group)[1][:first_name])
+     assert_equal("JavaScript", sorted_group(group)[1][:language])
   end
 end

@@ -7,19 +7,27 @@
   • The array does not include developers coding in the same language and sharing the same name.
 =end
 
-def sort_by_language(group)
-  sorted_group = group.sort_by { |individual| individual[:language] }
+def sorted_group(group)
+  sort_by_first_name = group.sort_by do |individual|
+    individual[:first_name]
+  end
+
+  final_sort = sort_by_first_name.sort_by do |individual|
+    individual[:language]
+  end
+
+  final_sort
 end
 
-
-
-
 group = [
-  { first_name: 'John', last_name: 'E', country: 'America', age: 38, language: 'Ruby' },
+  { first_name: 'Xavier', last_name: 'E', country: 'America', age: 38, language: 'JavaScript' },
   { first_name: 'Sally', last_name: 'M', country: 'America', age: 29, language: 'Rails' },
-  { first_name: 'Lena', last_name: 'F', country: 'Thailand', age: 32, language: 'JavaScript' },
-  { first_name: 'Ryan', last_name: 'S', country: 'Canada', age: 30, language: 'C#' },
-  { first_name: 'Caleb', last_name: 'A', country: 'America', age: 30, language: 'Ruby' },
-  { first_name: 'Edward', last_name: 'L', country: 'India', age: 25, language: 'Python' }
+  { first_name: 'Lena', last_name: 'F', country: 'Thailand', age: 32, language: 'C' },
+  { first_name: 'Ryan', last_name: 'S', country: 'Canada', age: 30, language: 'C' },
+  { first_name: 'Bobby', last_name: 'A', country: 'America', age: 30, language: 'JavaScript' },
+  { first_name: 'Caleb', last_name: 'A', country: 'America', age: 30, language: 'Python' },
+  { first_name: 'Edward', last_name: 'L', country: 'India', age: 25, language: 'Python' },
+  { first_name: 'Samual', last_name: 'J', country: 'Ireland', age: 25, language: 'Ruby' },
+  { first_name: 'Zena', last_name: 'J', country: 'Ireland', age: 25, language: 'JavaScript' }
  ]
- # puts sort_by_language(group)
+ sorted_group(group)
