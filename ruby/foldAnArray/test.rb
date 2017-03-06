@@ -7,4 +7,10 @@ class TestFoldAnArray < Minitest::Test
     fold_iteration = 1
     assert_equal([6, 6, 3], fold_array(original_array, fold_iteration))
   end
+
+  def test_array_folds_2_time_returning_array_9_6
+    original_array = [1, 2, 3, 4, 5]
+    fold_iteration = 2
+    assert_equal([9, 6], fold_array(original_array, fold_iteration))
+  end
 end
