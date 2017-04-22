@@ -11,6 +11,16 @@ function firstNonConsecutive(arr) {
 
 var arr = [1, 2, 3, 4, 6, 7, 8];
 console.log(firstNonConsecutive(arr));
+// returns 6
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log(firstNonConsecutive(arr));
+// returns null
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11];
+console.log(firstNonConsecutive(arr));
+// returns 11
+
+var arr = [1, 2, 3, 4];
+console.log(firstNonConsecutive(arr));
+// returns null
